@@ -3,9 +3,13 @@ import Plot from "react-plotly.js";
 
 function BarChart(props) {
   return (
-    <div>
-      <Plot />
-    </div>
+    <Plot
+      data={props.data}
+      config={props.config}
+      layout={props.layout}
+      className={props.className}
+      useResizeHandler={true}
+    />
   );
 }
 

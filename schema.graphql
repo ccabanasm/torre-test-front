@@ -1,0 +1,20 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+type JobStatus {
+    label: String!
+    value: Int!
+}
+
+type JobsByAvgIncome {
+    label: String!
+    value: Float!
+}
+
+type Query {
+    jobStatus: [JobStatus!]!
+    jobsByAvgIncome(last: Int): [JobsByAvgIncome!]!
+}

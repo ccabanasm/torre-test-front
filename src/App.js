@@ -1,29 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
+import "./App.css";
 import Navbar from "./components/Navbar";
 import NavLogo from "./components/NavLogo";
 import NavItem from "./components/NavItem";
-import {IoWater, MdExpandMore} from "react-icons/all";
+import { FaSuitcase, MdExpandMore } from "react-icons/all";
 import DropdownMenu from "./components/DropdownMenu";
 import JobsPage from "./pages/jobs/jobs";
 
 function App() {
   return (
-      <Router>
+    <Router>
       <>
         <Navbar>
           <NavLogo titulo="torre" />
-          <NavItem icon={<IoWater />} />
+          <NavItem icon={<FaSuitcase />} />
           <NavItem icon={<MdExpandMore />} titulo="username">
-              <DropdownMenu></DropdownMenu>
+            <DropdownMenu></DropdownMenu>
           </NavItem>
         </Navbar>
-          <Switch>
-              <Route exact path="/" component={JobsPage} />
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={JobsPage} />
+        </Switch>
       </>
-      </Router>
+    </Router>
   );
 }
 
